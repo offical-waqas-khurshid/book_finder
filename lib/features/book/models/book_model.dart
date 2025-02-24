@@ -11,7 +11,7 @@ class BookModel {
     required this.thumbnail,
   });
 
-  /// 🔹 Convert `BookModel` to a `Map<String, dynamic>` (for storage)
+  /// Convert `BookModel` to a `Map<String, dynamic>` (for storage)
   Map<String, dynamic> toMap() {
     return {
       'id': id,
@@ -21,7 +21,7 @@ class BookModel {
     };
   }
 
-  /// 🔹 Create `BookModel` from a `Map<String, dynamic>` (for retrieval)
+  /// Create `BookModel` from a `Map<String, dynamic>` (for retrieval)
   factory BookModel.fromMap(Map<String, dynamic> map) {
     return BookModel(
       id: map['id'] ?? '',
@@ -31,7 +31,7 @@ class BookModel {
     );
   }
 
-  /// 🔹 Convert JSON (API response) to `BookModel`
+  /// Convert JSON (API response) to `BookModel`
   factory BookModel.fromJson(Map<String, dynamic> json) {
     return BookModel(
       id: json['id'],
